@@ -1,0 +1,30 @@
+{
+  "event": {
+    "event_id": "EVT-2026-001",
+    "event_type": "REGULATORY",
+    "lifecycle_stage": "CONSULTATION",
+    "title": "IRDAI consultation on insurance distribution economics",
+    "description": "Regulator floats consultation paper on commission/expense caps. Proposal stage, not final rule.",
+    "source": {"publisher": "Business Standard", "tier": "B", "source_type": "news"},
+    "affected_entities": ["PB Fintech"],
+    "affected_sector": "Insurance Distribution",
+    "direction": "BEARISH",
+    "revenue_impact": 70, "margin_impact": 65, "eps_impact": 70,
+    "cashflow_impact": 50, "duration_score": 60, "exposure_score": 85,
+    "surprise_score": 70, "is_verified": false
+  },
+  "market": {
+    "symbol": "POLICYBZR", "spot": 1200, "prev_close": 1818, "open_price": 1250,
+    "stock_move_pct": -34.0, "sector_move_pct": -3.0, "index_move_pct": -0.5,
+    "volume_multiple": 4.2
+  },
+  "options": {
+    "symbol": "POLICYBZR", "expiry": "2026-09-29", "spot": 1200,
+    "iv": 109.5, "iv_percentile": 92, "lot_size": 350,
+    "call_premium": 12, "put_premium": 45, "bid_ask_spread_pct": 3.0,
+    "dte": 3, "oi": 100000, "oi_change_pct": 25,
+    "estimated_fundamental_move_pct": -12.0
+  },
+  "account": {"capital": 2000, "normal_risk_min": 200, "normal_risk_max": 400, "max_single_loss": 500},
+  "llm": {}
+}

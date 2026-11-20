@@ -1,0 +1,29 @@
+[
+  {
+    "event_id": "EVT-1790406251906",
+    "timestamp": "2026-09-26T12:34:11.929606",
+    "event_type": "REGULATORY",
+    "lifecycle_stage": "CONSULTATION",
+    "title": "IRDAI consultation on insurance distribution economics",
+    "description": "Regulator floats consultation paper on commission/expense caps in insurance distribution. Proposal stage \u2014 not a final rule. Market watches Policybazaar economics.",
+    "source": {
+      "publisher": "user",
+      "url": "",
+      "source_type": "news",
+      "tier": "B"
+    },
+    "affected_entities": [
+      "PB Fintech"
+    ],
+    "affected_sector": "Insurance Distribution",
+    "direction": "BEARISH",
+    "revenue_impact": 70.0,
+    "margin_impact": 65.0,
+    "eps_impact": 70.0,
+    "cashflow_impact": 50.0,
+    "duration_score": 60.0,
+    "exposure_score": 85.0,
+    "surprise_score": 70.0,
+    "is_verified": false
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "symbol": "POLICYBZR",
+    "event_id": "EVT-1790406251906",
+    "status": "NO_TRADE",
+    "alert_level": 2,
+    "direction": "BEARISH",
+    "fundamental_score": 66.5,
+    "event_score": 76.04,
+    "expectation_gap_pct": -22.0,
+    "expected_move_abs": 119.13,
+    "suggested_strategy": "NONE",
+    "entry_spot_range": [],
+    "premium_range": [],
+    "max_loss": 0.0,
+    "target_underlying": null,
+    "invalidation_price": null,
+    "holding_period": "1-3 sessions",
+    "reason": "Gate FAIL: Position Fits Capital. EventScore 76.04. Strategy NONE.",
+    "steps": [
+      {
+        "agent": "verifier",
+        "lifecycle": "VERIFIED",
+        "summary": "Tier B -> VERIFIED (CONSULTATION)",
+        "data": {
+          "verification_status": "CONFIRMED",
+          "reliability_note": "Tier A/B: usable with standard checks."
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "classifier",
+        "lifecycle": "VERIFIED",
+        "summary": "REGULATORY / BEARISH (conf 0.8)",
+        "data": {
+          "event_type": "REGULATORY",
+          "sector": "Insurance Distribution",
+          "direction": "BEARISH",
+          "entities": [
+            "PB Fintech"
+          ],
+          "confidence": 0.8
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "fundamental",
+        "lifecycle": "IMPACT_MAPPED",
+        "summary": "Fundamental 66.5/100 (High)",
+        "data": {
+          "transmission": [
+            "Revenue/margin channel per KB Sec 8"
+          ],
+          "narrative": "Engine score 66.5 (High). Proposal stage: earnings impact is scenario-based, not final.",
+          "engine_score": 66.5,
+          "band": "High"
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "market",
+        "lifecycle": "MARKET_REACTION_MEASURED",
+        "summary": "Move -34.0% x4.2 -> significant",
+        "data": {
+          "narrative": "Stock -34.0% (gap -31.240000000000002%, rel-sector -31.0pp), volume x4.2. Significant reaction.",
+          "gap_pct": -31.240000000000002,
+          "relative_pp": -31.0,
+          "reaction_score": 100,
+          "significant": true
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "options",
+        "lifecycle": "OPTIONS_ANALYZED",
+        "summary": "ExpMove Rs.119.13, IVp92, liq 55.0",
+        "data": {
+          "narrative": "Expected move Rs.119.13 vs fundamental-implied Rs.144.0. IV 109.5% (p92). IV elevated \u2014 directional gains can be erased by IV crush + theta. Prefer spreads or wait.",
+          "expected_move_abs": 119.13,
+          "fair_move_abs": 144.0,
+          "opp_score": 67.4,
+          "liquidity_score": 55.0,
+          "liquidity_ok": true
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "expectation",
+        "lifecycle": "OPTIONS_ANALYZED",
+        "summary": "Expectation gap -22.0pp",
+        "data": {
+          "narrative": "Gap -22.0pp (actual -34.0% vs est. -12.0%). Market priced MORE damage than estimates justify \u2014 investigate mean-reversion/volatility setups, not automatic puts.",
+          "gap_pp": -22.0,
+          "material": true,
+          "interpretation": "Market priced MORE damage than estimates justify \u2014 investigate mean-reversion/volatility setups, not automatic puts."
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "second_order",
+        "lifecycle": "OPTIONS_ANALYZED",
+        "summary": "Contagion: Competitors, Suppliers/Customers, Distributors/Brokers, Banks/Lenders...",
+        "data": {
+          "nodes": [
+            "Competitors",
+            "Suppliers/Customers",
+            "Distributors/Brokers",
+            "Banks/Lenders",
+            "Sector index"
+          ],
+          "narrative": "Contagion map from primary entity outward."
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "signal",
+        "lifecycle": "NO_TRADE",
+        "summary": "NO_TRADE (NONE) \u2014 ES 76.04",
+        "data": {
+          "narrative": "Gate FAIL: Position Fits Capital. EventScore 76.04. Strategy NONE.",
+          "event_score": 76.04,
+          "strategy": "NONE",
+          "sizing": {
+            "lots": 0,
+            "cost": 15750.0,
+            "fits": false,
+            "reason": "One lot costs Rs.15750.0 > Rs.500.0 budget -> NO_TRADE or paper trade"
+          },
+          "gate_pass": false,
+          "failed": [
+            "Position Fits Capital"
+          ],
+          "status": "NO_TRADE"
+        },
+        "model": "mock"
+      },
+      {
+        "agent": "risk",
+        "lifecycle": "NO_TRADE",
+        "summary": "NO_TRADE \u2014 no capital at risk. Paper-watch only; invalidation = thesis inputs change.",
+        "data": {
+          "max_loss": 0.0,
+          "narrative": "NO_TRADE \u2014 no capital at risk. Paper-watch only; invalidation = thesis inputs change.",
+          "invalidation_price": null,
+          "target_underlying": null
+        },
+        "model": "mock"
+      }
+    ],
+    "second_order": [
+      "Competitors",
+      "Suppliers/Customers",
+      "Distributors/Brokers",
+      "Banks/Lenders",
+      "Sector index"
+    ],
+    "llm": {
+      "provider": "openai",
+      "model": "mock"
+    }
+  }
+]
